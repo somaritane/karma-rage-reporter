@@ -29,6 +29,7 @@ node_modules
 
 # IDEs / Editors
 .idea
+.vscode
 
 # Misc
 .*.cache
