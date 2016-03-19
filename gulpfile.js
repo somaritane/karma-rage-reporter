@@ -1,25 +1,28 @@
 'use strict';
 
 var gulp = require('gulp'),
-    karma = require('karma').server,
-    jshint = require('gulp-jshint');
+    Server = require('karma').Server,
+    eslint = require('gulp-eslint');
 
 var files = [
-  '*.js',
-  'demo/**/*-spec.js'
+    '*.js',
+    'demo/**/*-spec.js'
 ];
 
-gulp.task('js', function () {
+gulp.task('lint', function () {
     gulp.src(files)
-        .pipe(jshint('.jshintrc'))
-        .pipe(jshint.reporter('jshint-stylish'));
+        .pipe(eslint())
+        .pipe(eslint.format())
+        .pipe(eslint.failAfterError());
 });
 
-gulp.task('demo', ['js'], function() {
-  karma.start({
-    configFile: __dirname + '/demo/karma.conf.js',
-    singleRun: true
-  });
+gulp.task('demo', function(done) {
+    new Server({
+        configFile: __dirname + '/demo/karma.conf.js',
+        singleRun: true
+    }, function() {
+        done();
+    }).start();
 });
 
-gulp.task('default', ['js']);
+gulp.task('default', ['lint']);

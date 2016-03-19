@@ -1,0 +1,31 @@
+{
+    "env": {
+        "browser": true,
+        "amd": true,
+        "node": true,
+        "jasmine": true
+    },
+    "rules": {
+        "camelcase": 2,
+        "comma-dangle": [2, "never"],
+        "curly": 2,
+        "eqeqeq": [2, "smart"],
+        "guard-for-in": 2,
+        "indent": [2, 4, {"SwitchCase": 1}],
+        "max-depth": [2, 2],
+        "no-extra-semi": 2,
+        "no-multi-spaces": 2,
+        "no-multiple-empty-lines": [2, {"max": 1}],
+        "no-trailing-spaces": 2,
+        "no-undef": 2,
+        "no-unused-vars": 2,
+        "quotes": [2, "single"],
+        "semi": [2, "always"],
+        "keyword-spacing": [2, {"before": true, "after": true}],
+        "space-infix-ops": 2,
+        "strict": 2
+    },
+    "globals": {
+        "requirejs": true
+    }
+}
