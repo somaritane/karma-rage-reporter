@@ -11,6 +11,23 @@ var RageReporter = function (baseReporterDecorator) {
         MAX_FAIL = 7,
         failuresCount = 0,
         recentResult = SUCCESS;
+    var RAGE_GUY =
+        '\nFFFFFFFFFFFF██████▀▀▀███████FFFFFFFFFFFF' +
+        '\nFFFFFFFF▄▄▄██▀▀░░░░░▄███▀▀▀█FFFFFFFFFFFF' +
+        '\nFFFFFFF█████▄░░▀▄▄░░███▀░░▄██FFFFFFFFFFF' +
+        '\nFFFFFFF████▀██▄░░░░░██░░░░█░████FFFFUUUU' +
+        '\nUUUUUUU███░░░░▀▄▄▄▄░██░░░░▀▀▀░░▀█UUUUUUU' +
+        '\nUUUUUU██▀▀█░░░░████▀▀▀█▄░░░░░░░██UUUUUUU' +
+        '\nUUUUU██░▀▀▀░░░░█░░▄▄▄▄▄██▄░░░░░▄█UUUUUUU' +
+        '\nUUUUU██░░░░░░░▄▀▄▀░█░▄█▄██▀▀▄▄▀▀█▄UUUUUU' +
+        '\nUUUUU███░░░░░▄▀█░█▄████████▄░░░░██UUUUUU' +
+        '\nUUUUU██░▀▀▀▀▀░▄██████████████░░░██UUUUUU' +
+        '\nUUUUU██▄░░░░░░██████▀▀▀░░▀████░░██UUUUUU' +
+        '\nUUUUUU██░░░░▄▀████▀░░░░░░▄░▀███░██UUUUUU' +
+        '\nUUUUUUU██░░░█████░░▄░░░░▄█░░▀██▄██UUUUUU' +
+        '\nUUUUUUUU██░░░███░░░░▀▀▄▄▄▄░▄░█▀███UUUUUU' +
+        '\nUUUUUUUUU███▄███▄▄▄▄███▄▄█▄▄█████UUUUUUU' +
+        '\n';
 
     this.specSuccess = function () {
         if (failuresCount < MAX_FAIL) {
@@ -34,6 +51,7 @@ var RageReporter = function (baseReporterDecorator) {
     this.onRunComplete = function () {
         if (failuresCount > 0) {
             this.write(NOK);
+            this.write(RAGE_GUY);
         } else {
             this.write(OK);
         }
