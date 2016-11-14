@@ -4,6 +4,7 @@
 
 # karma-rage-reporter
 Karma test reporter plugin inspired by [PEP712]
+![karma-rage-reporter demo](./demo/karma-rage-reporter-demo.png)
 
 ## Installation
 

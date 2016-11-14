@@ -1,6 +1,6 @@
 {
   "name": "karma-rage-reporter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Karma reporter inspired by PEP712",
   "private": true,
   "main": "index.js",
@@ -23,14 +23,14 @@
   },
   "homepage": "https://github.com/somaritane/karma-rage-reporter",
   "peerDependencies": {
-    "karma": ">=0.13.22"
+    "karma": ">=1.0.0"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-eslint": "^2.0.0",
-    "jasmine-core": "^2.4.1",
-    "karma": ">=0.13.22",
-    "karma-jasmine": "^0.3.8",
-    "karma-phantomjs-launcher": "^1.0.0"
+    "gulp-eslint": "^3.0.1",
+    "jasmine-core": "^2.5.2",
+    "karma": ">=1.0.0",
+    "karma-jasmine": "^1.0.2",
+    "karma-phantomjs-launcher": "^1.0.2"
   }
 }
